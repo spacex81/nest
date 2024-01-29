@@ -32,7 +32,7 @@ export class PostsController {
 
   @Patch(':id')
   replacePost(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
-    return this.postsService.replacePost(+id, updatePostDto);
+    return this.postsService.updatePost(+id, updatePostDto);
   }
 
   @Delete(':id')
